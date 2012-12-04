@@ -1,0 +1,29 @@
+# Input card for LHC 14 TeV
+# RootS, PPBAR true/false (1:p-pbar collider ; 0:pp collider)
+1960	 1
+# Order of the calculation: 0 for born, 1 for NLO
+0
+# Iset of PDF (If Iset=10, write the .ini file to be read after that.)
+10550
+# scale choices: mu_uv / PJ and mu_co / PJ
+0.5	0.5
+# MC generator := foam = 0, vegas = 1,  suave = 2, Divonne = 3, Cuhre = 4, uniform = 5
+5
+# MC SEED ( 0 <= SEED < 259200, set to 13590 to get random number with run.sh)
+888
+# number of RENO points (100000 is a reasonable choice.)
+100000
+# Write to a log file   (1:yes, 0: no) and the log file name
+0 	eks.out
+# Write to a ROOT file (1:yes, 0: no) and the ROOT file name
+0 	D0_jet.root
+#  Cuts on each jet: ymin, ymax, ptmin, ptmax
+0.  	4.0	     40.    2000.
+# number of blocks and threads per block
+10	 512
+# number of events to go to GPU per iteration
+5120
+
+# EKS will not read below this line
+10550 #ct66 from LHAPDF
+10800 #ct10 from LHAPDF
